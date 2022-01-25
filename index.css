@@ -1,0 +1,65 @@
+body {
+  font-size: 16px;
+}
+
+.invertedPyramid {
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background: #ffa500;
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.invertedPyramid .row {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+.invertedPyramid .row .seat {
+  background: #fff;
+  color: #000;
+  width: 7%;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #000;
+}
+
+.invertedPyramid .row .seat.selected {
+  background: #0f0;
+}
+
+.invertedPyramid .row .seat.disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  color: #ccc;
+  background: #fefefefe;
+  font-weight: 10;
+}
+
+@media (max-width: 768px) {
+  .invertedPyramid {
+    height: 60vh;
+  }
+
+  .invertedPyramid .row .seat {
+    height: 25px;
+    width: 20px;
+    font-size: 1rem;
+  }
+}
